@@ -1,0 +1,7 @@
+@mixin font30{
+    font-size: 60px;
+}
+.greeter{
+    @include font30;
+    background-color: #d1d1d1;
+}

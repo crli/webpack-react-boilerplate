@@ -1,0 +1,6 @@
+@mixin red{
+    color: red
+}
+p{
+    @include red
+}
