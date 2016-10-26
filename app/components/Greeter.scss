@@ -1,7 +1,10 @@
 @mixin font30{
     font-size: 60px;
 }
-.greeter{
+.btn{
     @include font30;
-    background-color: #d1d1d1;
+    background-color: red;
+    color:#fff;
+    box-shadow: 5px 5px 5px #259;
+    display: inline-block;
 }

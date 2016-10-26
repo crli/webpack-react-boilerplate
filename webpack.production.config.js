@@ -26,12 +26,12 @@ module.exports = {
       { 
         test: /\.css$/, 
         include: path.resolve(__dirname, 'app'), 
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&localIdentName=[name]--[local]-[hash:base64:5]!postcss-loader")
       },
       { 
         test: /\.scss$/,
         include: path.resolve(__dirname, 'app'), 
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded")
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&localIdentName=[name]--[local]-[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded")
         // 'style-loader!css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded'
       },
       { 

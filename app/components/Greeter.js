@@ -1,16 +1,36 @@
-import React from 'react'
-import config from './config.json';
+import React, { Component }from 'react'
+import $ from 'jquery';
 import styles from './Greeter.scss';
-class Greeter extends React.Component{
-  render() {
-    return (
-      <div>
-        <span className = {styles.greeter}>欢迎</span>
-        <p>你好</p>
-        {config.greetText}
-      </div>
-    );
-  }
+
+class Greeter extends Component{
+  constructor(props){
+      super(props);
+      this.state = {
+        liked: false,
+        value: "crlin"
+      }
+    }
+    handleClick(){
+      this.setState({
+        liked: !this.state.liked
+      })
+    }
+    handleChange(event){
+      this.setState({
+        value: event.target.value
+      })
+    }
+    render(){
+      let text = this.state.liked ? 'like' : 'haven\'t liked',
+          value = this.state.value;
+      return (   
+        <div> 
+          <p onClick={this.handleClick.bind(this)}>You {text} this. Click to toggle.</p>
+          <input type="text" value={value} onChange={this.handleChange.bind(this)} />
+          <p>{value}</p>
+        </div>
+      );
+    }
 }
 
-export default Greeter
+export default Greeter;

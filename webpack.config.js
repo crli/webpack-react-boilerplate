@@ -40,12 +40,12 @@ module.exports = {
       { 
         test: /\.css$/, 
         include: path.resolve(__dirname, 'app'), 
-        loader: 'style-loader!css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader' 
+        loader: 'style-loader!css-loader?modules&localIdentName=[name]--[local]-[hash:base64:5]!postcss-loader' 
       },
       { 
         test: /\.scss$/,
         include: path.resolve(__dirname, 'app'), 
-        loader: 'style-loader!css-loader?modules&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded'
+        loader: 'style-loader!css-loader?modules&localIdentName=[name]--[local]-[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded'
       },
       { 
         test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/, 
